@@ -1,11 +1,129 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
 <head>
-  <meta charset="utf-8">
-  <title>My Page</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kohei Miyakawa</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background: #0d1117;
+  color: #c9d1d9;
+}
+
+/* ヒーロー */
+.hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(120deg, #0d1117, #161b22);
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin: 0;
+}
+
+.hero p {
+  opacity: 0.7;
+}
+
+/* セクション */
+.section {
+  padding: 60px 20px;
+  max-width: 900px;
+  margin: auto;
+}
+
+/* カード */
+.card {
+  background: #161b22;
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 12px;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  background: #1f2937;
+}
+
+/* 見出し */
+h2 {
+  border-left: 4px solid #58a6ff;
+  padding-left: 10px;
+}
+
+/* リンク */
+a {
+  color: #58a6ff;
+  text-decoration: none;
+}
+</style>
 </head>
+
 <body>
-  <h1>Hello</h1>
-  <p>これは私のホームページです。</p>
+
+<!-- ヒーロー -->
+<div class="hero">
+  <h1>Kohei Miyakawa</h1>
+  <p>FPGA / Astronomy / Python</p>
+</div>
+
+<!-- About -->
+<div class="section">
+  <h2>About</h2>
+  <p>
+    天文観測とFPGAを融合した研究を行っています。
+    データ解析・ハードウェア・ソフトウェアを横断して開発。
+  </p>
+</div>
+
+<!-- Research -->
+<div class="section">
+  <h2>Research</h2>
+
+  <div class="card">
+    <h3>Exoplanet Observation</h3>
+    <p>透過光分光による系外惑星大気の解析</p>
+  </div>
+
+  <div class="card">
+    <h3>FPGA Image Processing</h3>
+    <p>Zybo Z7を用いたリアルタイム画像処理</p>
+  </div>
+
+</div>
+
+<!-- Projects -->
+<div class="section">
+  <h2>Projects</h2>
+
+  <div class="card">
+    <h3>Photometry Tool</h3>
+    <p>Pythonによる自動測光システム</p>
+  </div>
+
+  <div class="card">
+    <h3>Star Tracker</h3>
+    <p>天体位置制御GUI + カメラ制御</p>
+  </div>
+
+</div>
+
+<!-- Contact -->
+<div class="section">
+  <h2>Contact</h2>
+  <p>
+    GitHub: <a href="#">リンク</a><br>
+    Email: your@email.com
+  </p>
+</div>
+
 </body>
 </html>
