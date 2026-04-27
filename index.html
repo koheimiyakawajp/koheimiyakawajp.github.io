@@ -23,13 +23,17 @@ body {
 
 /* タイトル */
 h1 {
-  font-size: 2.5rem;
+  font-size: 2.0rem;
   margin-bottom: 10px;
 }
 
 .subtitle {
   color: #8b949e;
   margin-bottom: 40px;
+}
+.contact {
+  color: #8b949e;
+  margin-bottom: 0px;
 }
 
 /* セクション */
@@ -83,7 +87,8 @@ p {
 }
 
 .exp p {
-  margin-top: 5px;
+  color: #8b949e;
+  margin-top: 1px;
 }
 /* リンク */
 a {
@@ -112,6 +117,11 @@ a:hover {
 }
 
 </style>
+
+<meta name="description" content="Kohei Miyakawa (宮川浩平) - Exoplanet research, instrumentation development, astronomy">
+<meta name="keywords" content="Kohei Miyakawa, 宮川浩平, exoplanet, astronomy, research">
+<meta name="author" content="Kohei Miyakawa">
+
 </head>
 
 <body>
@@ -121,8 +131,9 @@ a:hover {
  <div class="header">
 
   <div>
-    <h1>Kohei Miyakawa</h1>
-    <div class="subtitle">Exoplanet / Instrument Development</div>
+    <h1>宮川 浩平 / Kohei Miyakawa</h1>
+    <div class="contact">📧 miyakawa＠ir.isas.jaxa.jp</div>
+    <div class="subtitle">Exoplanet, Instrument development</div>
   </div>
   <img src="prof.JPG" class="profile" >
 </div> 
@@ -140,16 +151,17 @@ a:hover {
 
   <section>
   <h2>Research</h2>
-  <ul>
 
       <details>
         <summary>
           Formation and evolutionary processes of exoplanets traced through young planets
         </summary>
+        <ul>
         <p class="jp">
           KeplerやTESSなどの衛星観測データを用い、星団領域における若い惑星および恒星活動を調査することで、
           時間発展に沿った惑星系の形成・進化過程の解明を目指しています。
         </p>
+        </ul>
       </details>
 
       <details>
@@ -174,7 +186,6 @@ a:hover {
         </ul>
       </details>
 
-  </ul>
 </section>
   <h2>Experience</h2>
 
@@ -220,7 +231,8 @@ a:hover {
 <section>
   <h2>Publications</h2>
 
-  <h3>First Author</h3>
+  <details>
+  <summary>First Author</summary>
   <div class="pub">
     Miyakawa, K. and Tada, S., et al. (2024)<br>
     <a href="https://ui.adsabs.harvard.edu/abs/2024SPIE13103E..1GM/abstract" target="_blank">
@@ -252,9 +264,13 @@ a:hover {
     </a><br>
     <span>The Astronomical Journal</span>
   </div>
+  </details>
 
 
-  <h3>Co-Author</h3>
+  <details>
+  <summary>
+  Co-Author
+  </summary>
 
   <div class="pub">
     Kawata, D., et al. (2024)<br>
@@ -304,8 +320,29 @@ a:hover {
     </a><br>
     <span>The Astronomical Journal</span>
   </div>
+  </details>
+
+
 
 </section>
+
+<section>
+  <h2>Funding</h2>
+
+  <div class="fund">
+    <span>Grant-in-Aid for Early-Career Scientists, JSPS (FY2026-2028)</span><br>
+  </div>
+
+  <div class="fund">
+    <span>Astrobiology PROJECT research grant, Astrobiology Center, NINS (FY2023)</span><br>
+  </div>
+
+  <div class="fund">
+    <span>Research Fellowships for Young Scientists (DC1), JSPS (FY2019-2021)</span><br>
+  </div>
+
+</section>
+
 
 </div>
 
