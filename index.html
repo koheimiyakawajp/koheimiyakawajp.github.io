@@ -8,121 +8,275 @@
 <style>
 body {
   margin: 0;
-  font-family: "Segoe UI", sans-serif;
-  background: #0d1117;
-  color: #c9d1d9;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #0f1115;
+  color: #e6edf3;
+  line-height: 1.7;
 }
 
-/* ヒーロー */
-.hero {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background: linear-gradient(120deg, #0d1117, #161b22);
+/* 全体レイアウト */
+.container {
+  max-width: 800px;
+  margin: auto;
+  padding: 60px 20px;
 }
 
-.hero h1 {
-  font-size: 3rem;
-  margin: 0;
+/* タイトル */
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
 }
 
-.hero p {
-  opacity: 0.7;
+.subtitle {
+  color: #8b949e;
+  margin-bottom: 40px;
 }
 
 /* セクション */
-.section {
-  padding: 60px 20px;
-  max-width: 900px;
-  margin: auto;
+section {
+  margin-bottom: 60px;
 }
 
-/* カード */
-.card {
-  background: #161b22;
-  padding: 20px;
-  margin: 20px 0;
-  border-radius: 12px;
-  transition: 0.3s;
-}
-
-.card:hover {
-  transform: translateY(-5px);
-  background: #1f2937;
-}
-
-/* 見出し */
 h2 {
-  border-left: 4px solid #58a6ff;
-  padding-left: 10px;
+  font-size: 1.4rem;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #30363d;
+  padding-bottom: 5px;
 }
 
+/* テキスト */
+p {
+  margin: 0 0 15px;
+}
+
+/* Publications */
+.pub {
+  margin-bottom: 15px;
+}
+
+.pub span {
+  color: #8b949e;
+  font-size: 0.9rem;
+}
+
+
+.edu {
+  margin-bottom: 25px;
+}
+
+.edu span {
+  color: #8b949e;
+  font-size: 0.9rem;
+}
+
+.edu p {
+  margin-top: 5px;
+}
+
+.exp {
+  margin-bottom: 25px;
+}
+
+.exp span {
+  color: #8b949e;
+  font-size: 0.9rem;
+}
+
+.exp p {
+  margin-top: 5px;
+}
 /* リンク */
 a {
   color: #58a6ff;
   text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 100px;
+}
+
+.profile {
+  width: 120px;
+  border-radius: 10%;
 }
 </style>
 </head>
 
 <body>
 
-<!-- ヒーロー -->
-<div class="hero">
-  <h1>Kohei Miyakawa</h1>
-  <p>FPGA / Astronomy / Python</p>
-</div>
+<div class="container">
 
-<!-- About -->
-<div class="section">
-  <h2>About</h2>
-  <p>
-    天文観測とFPGAを融合した研究を行っています。
-    データ解析・ハードウェア・ソフトウェアを横断して開発。
-  </p>
-</div>
+ <div class="header">
 
-<!-- Research -->
-<div class="section">
+  <div>
+    <h1>Kohei Miyakawa</h1>
+    <div class="subtitle">Exoplanet / Instrument Development</div>
+  </div>
+  <img src="prof.JPG" class="profile" >
+</div> 
+
+  <section>
+    <h2>About</h2>
+    <p>
+    I am a researcher in exoplanet science.
+    I enjoy a comprehensive approach that spans hardware development, observations, and data analysis.
+    </p>
+  </section>
+
+  <section>
   <h2>Research</h2>
+  <ul>
+    <li>
+      Formation and evolutionary processes of exoplanets traced through young planetary systems
+    </li>
+    <li>
+      Development of instrumentation for astronomical research
+      <ul>
+        <li>Detector characterization (JASMINE)</li>
+        <li>Instrumentation for ground-based telescopes (ISAS 1.3 m)</li>
+      </ul>
+    </li>
+  </ul>
+   </section> 
 
-  <div class="card">
-    <h3>Exoplanet Observation</h3>
-    <p>透過光分光による系外惑星大気の解析</p>
+   <section>
+  <h2>Experience</h2>
+
+  <div class="exp">
+    <strong>Japan Aerospace Exploration Agency (JAXA)</strong><br>
+    <span>Inter-University Research and Facility Management Group, ISAS </span>
+    <p>
+        Aerospace Project Research Associate (2024.4 - Present)
+    </p>
   </div>
 
-  <div class="card">
-    <h3>FPGA Image Processing</h3>
-    <p>Zybo Z7を用いたリアルタイム画像処理</p>
+  <div class="exp">
+    <strong>National Astronomical Observatory in Japan (NAOJ)</strong><br>
+    <span>JASMINE Project Office </span>
+    <p>
+        Project Research Fellow (2022.4 – 2024.3)
+    </p>
+  </div>
+  <div class="exp">
+    <strong>Daiwa Institute of Research ltd.</strong><br>
+    <p>
+        System Engineer (2018.4 – 2019.3)
+    </p>
+  </div>
+  </section>  
+
+  <section>
+  <h2>Education</h2>
+  <div class="edu">
+    <strong>Tokyo Institute of Technology (now Institute of Science Tokyo)</strong><br>
+    <p>
+        Department of Earth and Planetary Sciences, (Advisor: Prof. B.Sato)
+    </p>
+    <span> Ph.D., 2019.4 – 2022.3</span><br>
+
+    <span> M.Sc., 2016.4 – 2018.3</span><br>
+
+    <span> B.Sc., 2012.4 – 2016.3</span><br>
   </div>
 
-</div>
+   </section>
 
-<!-- Projects -->
-<div class="section">
-  <h2>Projects</h2>
+<section>
+  <h2>Publications</h2>
 
-  <div class="card">
-    <h3>Photometry Tool</h3>
-    <p>Pythonによる自動測光システム</p>
+  <h3>First Author</h3>
+  <div class="pub">
+    Miyakawa, K. and Tada, S., et al. (2024)<br>
+    <a href="https://ui.adsabs.harvard.edu/abs/2024SPIE13103E..1GM/abstract" target="_blank">
+      Performance report of a substrate-removed InGaAs sensor for the JASMINE mission
+    </a><br>
+    <span>Proceedings of the SPIE</span>
   </div>
 
-  <div class="card">
-    <h3>Star Tracker</h3>
-    <p>天体位置制御GUI + カメラ制御</p>
+  <div class="pub">
+    Miyakawa, K., et al. (2022)<br>
+    <a href="https://ui.adsabs.harvard.edu/abs/2022AJ....164..209M/abstract" target="_blank">
+      Color Dependence of the Transit Detectability of Young Active M Dwarfs
+    </a><br>
+    <span>The Astronomical Journal</span>
   </div>
 
-</div>
+  <div class="pub">
+    Miyakawa, K., et al. (2021)<br>
+    <a href="https://ui.adsabs.harvard.edu/abs/2021AJ....162..104M/abstract" target="_blank">
+      Wavelength Dependence of Activity-induced Photometric Variations for Young Cool Stars in Hyades
+    </a><br>
+    <span>The Astronomical Journal</span>
+  </div>
 
-<!-- Contact -->
-<div class="section">
-  <h2>Contact</h2>
-  <p>
-    GitHub: <a href="#">リンク</a><br>
-    Email: your@email.com
-  </p>
+  <div class="pub">
+    Miyakawa, K., et al. (2021)<br>
+    <a href="https://ui.adsabs.harvard.edu/abs/2021AJ....161..276M/abstract" target="_blank">
+      Joint Analysis of Multicolor Photometry: A New Approach to Constrain the Nature of Multiple-star Systems Hosting Exoplanet Candidates
+    </a><br>
+    <span>The Astronomical Journal</span>
+  </div>
+
+
+  <h3>Co-Author</h3>
+
+  <div class="pub">
+    Kawata, D., et al. (2024)<br>
+    <a href="https://ui.adsabs.harvard.edu/abs/2024PASJ...76..386K/abstract" target="_blank">
+      JASMINE: Near-infrared astrometry and time-series photometry science 
+    </a><br>
+    <span>Publications of the Astronomical Society of Japan</span>
+  </div>
+
+  <div class="pub">
+    Hori, Y., et al. (2024)<br>
+    <a href="https://ui.adsabs.harvard.edu/abs/2024AJ....167..289H/abstract" target="_blank">
+      The Discovery and Follow-up of Four Transiting Short-period Sub-Neptunes Orbiting M Dwarfs 
+    </a><br>
+    <span>The Astronomical Journal</span>
+  </div>
+
+
+  <div class="pub">
+    Hirano, T., et al. (2023)<br>
+    <a href="https://ui.adsabs.harvard.edu/abs/2023AJ....165..131H/abstract" target="_blank">
+      An Earth-sized Planet around an M5 Dwarf Star at 22 pc
+    </a><br>
+    <span>The Astronomical Journal</span>
+  </div>
+
+  <div class="pub">
+    Kawauchi, K., et al. (2022)<br>
+    <a href="https://ui.adsabs.harvard.edu/abs/2022A%26A...666A...4K/abstract" target="_blank">
+      Validation and atmospheric exploration of the sub-Neptune TOI-2136b around a nearby M3 dwarf 
+    </a><br>
+    <span>Astronomy & Astrophysics</span>
+  </div>
+
+  <div class="pub">
+    Hirano, T., et al. (2021)<br>
+    <a href="https://ui.adsabs.harvard.edu/abs/2021AJ....162..161H/abstract" target="_blank">
+      Two Bright M Dwarfs Hosting Ultra-Short-Period Super-Earths with Earth-like Compositions
+    </a><br>
+    <span>The Astronomical Journal</span>
+  </div>
+
+  <div class="pub">
+    Hirano, T., et al. (2018)<br>
+    <a href="https://ui.adsabs.harvard.edu/abs/2018AJ....155..127H/abstract" target="_blank">
+      Exoplanets around Low-mass Stars Unveiled by K2
+    </a><br>
+    <span>The Astronomical Journal</span>
+  </div>
+
+</section>
+
 </div>
 
 </body>
